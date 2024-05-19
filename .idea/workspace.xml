@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c25ea73e-6905-40c8-880f-ab2416b87d86" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/svgConverter.py" beforeDir="false" afterPath="$PROJECT_DIR$/svgConverter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drawing.gcode" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/svgs/circle.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +100,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716167675670</updated>
-      <workItem from="1716167681912" duration="4562000" />
+      <workItem from="1716167681912" duration="4790000" />
     </task>
     <servers />
   </component>
@@ -117,6 +119,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/gCodePlotterGenerator$main.coverage" NAME="main Coverage Results" MODIFIED="1716171092946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gCodePlotterGenerator$main.coverage" NAME="main Coverage Results" MODIFIED="1716161219990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
