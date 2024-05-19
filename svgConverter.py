@@ -11,4 +11,4 @@ def generate_curves():
 
     gcode_compiler.append_curves(curves)
     gcode_compiler.compile_to_file("drawing.gcode", passes=1)
-    print(curves)
+
