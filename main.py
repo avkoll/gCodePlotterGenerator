@@ -1,16 +1,33 @@
-# This is a sample Python script.
+def generate_2d_plotter_gcode(points):
+    gcode = ["G21 ; Set units to millimeters", "G90 ; Use absolute positioning", "G28 ; Home all axes",
+             "G92 E0 ; Reset extruder position"]
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    # Initialize the plotter
+
+    # Move to the starting point
+    start_point = points[0]
+    gcode.append(f"G1 X{start_point[0]:.2f} Y{start_point[1]:.2f} F1500")
+
+    # Plot the points
+    for point in points[1:]:
+        x, y = point
+        gcode.append(f"G1 X{x:.2f} Y{y:.2f} F1500")
+
+    # Finish the plot
+    gcode.append("G28 ; Home all axes")
+    gcode.append("M84 ; Disable motors")
+
+    return "\n".join(gcode)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main():
+    # Define the points to plot
+    points = [(0, 0), (10, 10), (20, 0), (30, 10), (40, 0)]
+
+    gcode = generate_2d_plotter_gcode(points)
+    with open('plotter_output.gcode', 'w') as f:
+        f.write(gcode)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    main()
