@@ -6,7 +6,7 @@ import svgwrite
 
 def scale_svg(svg_path, output_path, max_width, max_height):
     # Read and parse the original SVG
-    paths, attributes, svg_attributes = svg2paths2("./svgs/star-984.svg")
+    paths, attributes, svg_attributes = svg2paths2(svg_path)
 
     # Calculate the bounding box of the original SVG
     min_x, min_y, max_x, max_y = paths[0].bbox()

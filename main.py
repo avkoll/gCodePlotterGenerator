@@ -12,14 +12,14 @@ def starting_gcode():
     gcodelist.append("G92 E0 ; Reset extruder position\n")
 
     # Move to the starting point
-    gcodelist.append("G1 X100 Y100 F1500\n")
+    gcodelist.append("G1 X0 Y0 F1500\n")
     #gcodelist.append("G91\n")
 
     return "".join(gcodelist)
 
 
 def create_shapes():
-    generate_curves("./svgs/star-984.svg")
+    generate_curves("./svgs/star-svgrepo-com.svg")
 
     # read from drawing.gcode 'buffer'
     with open('drawing.gcode', 'r') as f:
