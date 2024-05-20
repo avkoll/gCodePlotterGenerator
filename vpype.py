@@ -9,7 +9,7 @@ def svg_to_gcode(input_file, output_gcode):
             "read", input_file,
             "gwrite",
             "--profile",
-            "gcode",
+            "gcode_maker_select",
             output_gcode
         ]
 
