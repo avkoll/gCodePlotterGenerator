@@ -1,33 +1,20 @@
 from svgConverter import generate_curves  # Converts a svg file to gcode
 
 
-def generate_2d_plotter_gcode(points):
-
-
-    # Plot the points
-    for point in points[1:]:
-        x, y = point
-        gcode.append(f"G1 X{x:.2f} Y{y:.2f} F1500")
-
-
-
-    return "\n".join(gcode)
-
-
 def starting_gcode():
     gcodelist = []
 
     # Initialize the plotter
-    gcodelist.append("G21 ; Set units to millimeters")
-    gcodelist.append("G90 ; Use absolute positioning")
-    gcodelist.append("G28 X0 Y0 ; Home X and Y axes")  # Home only X and Y axes
-    gcodelist.append("G4 P2000 ; Wait for 2 seconds to ensure homing is completed")
-    gcodelist.append("G92 E0 ; Reset extruder position")
+    gcodelist.append("G21 ; Set units to millimeters\n")
+    gcodelist.append("G90 ; Use absolute positioning\n")
+    gcodelist.append("G28 X0 Y0 ; Home X and Y axes\n")  # Home only X and Y axes
+    gcodelist.append("G4 P2000 ; Wait for 2 seconds to ensure homing is completed\n")
+    gcodelist.append("G92 E0 ; Reset extruder position\n")
 
     # Move to the starting point
-    gcodelist.append(f"G1 X10 Y10 F1500")
+    gcodelist.append("G1 X10 Y10 F1500\n")
 
-    return "\n".join(gcodelist)
+    return "".join(gcodelist)
 
 
 def create_shapes():
@@ -37,13 +24,13 @@ def create_shapes():
     with open('drawing.gcode', 'r') as f:
         lines = f.readlines()
 
-    # Skip certain lines
-    lines_to_append = lines[0:]
-
-    # Finish the plot
-    lines_to_append.append("G28 X0 Y0 ; Home X and Y axes\n")  # Home only X and Y axes
-    lines_to_append.append("G4 P2000 ; Wait for 2 seconds to ensure homing is completed\n")
-    lines_to_append.append("M84 ; Disable motors\n")
+    # Skip certain lines and flatten the list
+    lines_to_append = [lines[0],
+                       lines[3]] + lines[5:] + [
+                          # Finish the plot
+                          "G28 X0 Y0 ; Home X and Y axes\n",
+                          "G4 P2000 ; Wait for 2 seconds to ensure homing is completed\n",
+                          "M84 ; Disable motors\n"]
 
     return "".join(lines_to_append)
 
