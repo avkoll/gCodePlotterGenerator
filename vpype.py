@@ -7,10 +7,10 @@ def svg_to_gcode(input_file, output_gcode):
         commands = [
             "vpype",
             "read", input_file,
-            "linemerge",
-            "linesimplify",
-            "linesort",
-            "write", "gcode", "-o", output_gcode
+            "gwrite",
+            "--profile",
+            "gcode",
+            output_gcode
         ]
 
         # Execute commands
