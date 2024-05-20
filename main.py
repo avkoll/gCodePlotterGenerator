@@ -1,5 +1,7 @@
 def generate_2d_plotter_gcode(points):
-    gcode = ["G21 ; Set units to millimeters", "G90 ; Use absolute positioning", "G28 ; Home all axes",
+    gcode = ["G21 ; Set units to millimeters",
+             "G90 ; Use absolute positioning",
+             "G28 X Y ; Home X and Y axes",  # Home only X and Y axes,
              "G92 E0 ; Reset extruder position"]
 
     # Initialize the plotter
@@ -14,7 +16,7 @@ def generate_2d_plotter_gcode(points):
         gcode.append(f"G1 X{x:.2f} Y{y:.2f} F1500")
 
     # Finish the plot
-    gcode.append("G28 ; Home all axes")
+    gcode.append("G28 X Y ; Home X and Y axes")
     gcode.append("M84 ; Disable motors")
 
     return "\n".join(gcode)
