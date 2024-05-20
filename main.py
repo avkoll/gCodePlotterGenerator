@@ -22,7 +22,7 @@ def generate_2d_plotter_gcode(points):
 
 def main():
     # Define the points to plot
-    points = [(0, 0), (10, 10), (20, 0), (30, 10), (40, 0)]
+    points = [(10, 10), (10, 50), (50, 50), (50, 10), (10, 10)]
 
     gcode = generate_2d_plotter_gcode(points)
     with open('plotter_output.gcode', 'w') as f:
