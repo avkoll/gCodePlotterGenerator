@@ -10,7 +10,7 @@ def svg_to_gcode(input_file, output_gcode):
             "linemerge",
             "linesimplify",
             "linesort",
-            "write", "gcode", output_gcode
+            "write", "gcode", "-o", output_gcode
         ]
 
         # Execute commands
