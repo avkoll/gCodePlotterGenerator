@@ -14,7 +14,8 @@ def generate_2d_plotter_gcode(points):
     return "\n".join(gcode)
 
 
-def starting_gcode(gcodelist):
+def starting_gcode():
+    gcodelist = []
 
     # Initialize the plotter
     gcodelist.append("G21 ; Set units to millimeters")
@@ -32,19 +33,28 @@ def starting_gcode(gcodelist):
 def create_shapes():
     generate_curves("./svgs/star-svgrepo-com.svg")
 
+    # read from drawing.gcode 'buffer'
+    with open('drawing.gcode', 'r') as f:
+        lines = infile.readlines()
+
+    # Skip certain lines
+    lines_to_append = lines[0:]
+
     # Finish the plot
-    gcode.append("G28 X0 Y0 ; Home X and Y axes")  # Home only X and Y axes
-    gcode.append("G4 P2000 ; Wait for 2 seconds to ensure homing is completed")
-    gcode.append("M84 ; Disable motors")
+    lines_to_append.append("G28 X0 Y0 ; Home X and Y axes")  # Home only X and Y axes
+    lines_to_append.append("G4 P2000 ; Wait for 2 seconds to ensure homing is completed")
+    lines_to_append.append("M84 ; Disable motors")
+
+    return "\n".join(lines_to_append)
 
 
 def main():
-    gcode = []
+    gcode = [starting_gcode()]
 
-
+    gcode.append(create_shapes())
 
     with open('plotter_output.gcode', 'w') as f:
-        f.write(gcode)
+        f.writelines(gcode)
 
 
 if __name__ == "__main__":

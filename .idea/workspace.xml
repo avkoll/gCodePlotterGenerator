@@ -7,7 +7,6 @@
     <list default="true" id="c25ea73e-6905-40c8-880f-ab2416b87d86" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svgConverter.py" beforeDir="false" afterPath="$PROJECT_DIR$/svgConverter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +100,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716167675670</updated>
-      <workItem from="1716167681912" duration="6321000" />
+      <workItem from="1716167681912" duration="7068000" />
     </task>
     <servers />
   </component>
