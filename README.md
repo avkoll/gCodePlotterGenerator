@@ -4,3 +4,4 @@ x and y axis plotter. 250mm each?
 
 **Firmware**
 Marlin Gcode
+SD card needs to be fat32

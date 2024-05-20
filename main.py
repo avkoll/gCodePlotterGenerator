@@ -1,10 +1,11 @@
 def generate_2d_plotter_gcode(points):
-    gcode = ["G21 ; Set units to millimeters",
-             "G90 ; Use absolute positioning",
-             "G28 X Y ; Home X and Y axes",  # Home only X and Y axes,
-             "G92 E0 ; Reset extruder position"]
+    gcode = []
 
     # Initialize the plotter
+    gcode.append("G21 ; Set units to millimeters")
+    gcode.append("G90 ; Use absolute positioning")
+    gcode.append("G28 X Y ; Home X and Y axes")  # Home only X and Y axes
+    gcode.append("G92 E0 ; Reset extruder position")
 
     # Move to the starting point
     start_point = points[0]
@@ -16,14 +17,14 @@ def generate_2d_plotter_gcode(points):
         gcode.append(f"G1 X{x:.2f} Y{y:.2f} F1500")
 
     # Finish the plot
-    gcode.append("G28 X Y ; Home X and Y axes")
+    gcode.append("G28 X Y ; Home X and Y axes")  # Home only X and Y axes
     gcode.append("M84 ; Disable motors")
 
     return "\n".join(gcode)
 
 
 def main():
-    # Define the points to plot
+    # Define the points to plot a square
     points = [(10, 10), (10, 50), (50, 50), (50, 10), (10, 10)]
 
     gcode = generate_2d_plotter_gcode(points)
