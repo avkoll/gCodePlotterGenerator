@@ -35,17 +35,17 @@ def create_shapes():
 
     # read from drawing.gcode 'buffer'
     with open('drawing.gcode', 'r') as f:
-        lines = infile.readlines()
+        lines = f.readlines()
 
     # Skip certain lines
     lines_to_append = lines[0:]
 
     # Finish the plot
-    lines_to_append.append("G28 X0 Y0 ; Home X and Y axes")  # Home only X and Y axes
-    lines_to_append.append("G4 P2000 ; Wait for 2 seconds to ensure homing is completed")
-    lines_to_append.append("M84 ; Disable motors")
+    lines_to_append.append("G28 X0 Y0 ; Home X and Y axes\n")  # Home only X and Y axes
+    lines_to_append.append("G4 P2000 ; Wait for 2 seconds to ensure homing is completed\n")
+    lines_to_append.append("M84 ; Disable motors\n")
 
-    return "\n".join(lines_to_append)
+    return "".join(lines_to_append)
 
 
 def main():
