@@ -10,6 +10,10 @@ drawing.gcode is being used as a buffer because I don't know how to make this li
 
 look into: https://pypi.org/project/vpype-gcode/
 
+main.py and svgConverter.py are no longer in use
+vpype.py uses the vpype library and does everything that I need it to do for now,\n
+I think I want main.py to be used later for writing custom functions that can be\n
+called at anytime during the program. 
 
 
 ## vpype Shid:

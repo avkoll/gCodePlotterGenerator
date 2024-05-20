@@ -1,6 +1,8 @@
 import subprocess
 
 
+# This script takes an svg drawing and outputs it into gcode using vpype
+
 def svg_to_gcode(input_file, output_gcode):
     try:
         # Run Vpype commands
@@ -23,7 +25,7 @@ def svg_to_gcode(input_file, output_gcode):
 
 
 def main():
-    svg_in = "./svgs/star-svgrepo-com.svg"
+    svg_in = "./svgs/star-984.svg"
     output_file = "./gcodes/output.gcode"
 
     svg_to_gcode(svg_in, output_file)
