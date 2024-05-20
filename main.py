@@ -37,6 +37,29 @@ def create_shapes():
     return "".join(lines_to_append)
 
 
+def scale_gcode(gcode_file, output_file, scaling_factor):
+    with open(gcode_file, 'r') as f:
+        lines = f.readlines()
+
+    scaled_lines = []
+    for line in lines:
+        if line.startswith('G1') or line.startswith('G0'):
+            parts = line.split(' ')
+            new_parts = []
+            for part in parts:
+                if part.startswith('X') or part.startswith('Y'):
+                    coordinate = float(part[1:]) * scaling_factor
+                    new_parts.append(f'{part[0]}{coordinate:.6f}')
+                else:
+                    new_parts.append(part)
+            scaled_lines.append(' '.join(new_parts) + '\n')
+        else:
+            scaled_lines.append(line)
+
+    with open(output_file, 'w') as f:
+        f.writelines(scaled_lines)
+
+
 def main():
     gcode = [starting_gcode()]
 
