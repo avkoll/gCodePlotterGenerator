@@ -12,25 +12,27 @@ def starting_gcode():
     gcodelist.append("G92 E0 ; Reset extruder position\n")
 
     # Move to the starting point
-    gcodelist.append("G1 X10 Y10 F1500\n")
+    gcodelist.append("G1 X100 Y100 F1500\n")
+    #gcodelist.append("G91\n")
 
     return "".join(gcodelist)
 
 
 def create_shapes():
-    generate_curves("./svgs/star-svgrepo-com.svg")
+    generate_curves("./svgs/star-984.svg")
 
     # read from drawing.gcode 'buffer'
     with open('drawing.gcode', 'r') as f:
         lines = f.readlines()
 
     # Skip certain lines and flatten the list
-    lines_to_append = [lines[0],
-                       lines[3]] + lines[5:] + [
-                          # Finish the plot
-                          "G28 X0 Y0 ; Home X and Y axes\n",
-                          "G4 P2000 ; Wait for 2 seconds to ensure homing is completed\n",
-                          "M84 ; Disable motors\n"]
+    lines_to_append = (
+                       lines[5:] +
+                        [
+                        # Finish the plot
+                        "G28 X0 Y0 ; Home X and Y axes\n",
+                        "G4 P2000 ; Wait for 2 seconds to ensure homing is completed\n",
+                        "M84 ; Disable motors\n"])
 
     return "".join(lines_to_append)
 
