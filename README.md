@@ -33,6 +33,7 @@ called at anytime during the program.
 
 TODOS:
     - list dependencies
+        - track correct files from vpype lib
     - fix curves from vpype
         - starting
         - optimize travel between curves
