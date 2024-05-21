@@ -25,7 +25,7 @@ def svg_to_gcode(input_file, output_gcode):
 
 
 def main():
-    svg_in = "./svgs/star-984.svg"
+    svg_in = "./svgs/snow-alt-1-svgrepo-com.svg"
     output_file = "./gcodes/output.gcode"
 
     svg_to_gcode(svg_in, output_file)
