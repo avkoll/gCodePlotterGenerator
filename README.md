@@ -15,6 +15,27 @@ vpype.py uses the vpype library and does everything that I need it to do for now
 I think I want main.py to be used later for writing custom functions that can be\n
 called at anytime during the program. 
 
+# Main.py general flow
+    - zero
+    - flatten sand
+    - pickup marble
+        - choose marble size
+    - start drawing at closest point to curve from marble parking spot
+    - draw
+    - finish drawing
+        choose:
+            - flatten sand
+                - return marble
+                - do whatever flattens sand
+            - continue another drawing over it
+            - park marble
+    - 
+
+TODOS:
+    - list dependencies
+    - fix curves from vpype
+        - starting
+        - optimize travel between curves
 
 ## vpype Shid:
 Alt profile for monoprice maker select V2:
