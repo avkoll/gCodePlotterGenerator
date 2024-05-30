@@ -46,5 +46,16 @@ TODOS:
         if that doesn't work then I am going to explore using an arduino to control the system 
         with some more robust motor controllers. 
         TMC2208 for smoother movements
+        R100 Resistors
 
-
+    Motors: C17HD40102-01N BiPolar
+        1.8 Deg per step
+        1.02A
+        0.62NM
+    Going to tune the drivers on the board to see if that makes them quieter following this guide:
+[Adjusting stepper motor current on Melzi Board](https://3dprinterwiki.info/setting-the-stepper-current-on-the-melzi-board/)
+    
+    Target -> 90% max current
+    VREF = Current(A) * 8 * SenseResistor(RS)
+    0.82 =     1.02   * 8 * 0.1
+    0.74 = 90% power
