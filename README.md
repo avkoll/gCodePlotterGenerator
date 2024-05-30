@@ -59,3 +59,7 @@ TODOS:
     VREF = Current(A) * 8 * SenseResistor(RS)
     0.82 =     1.02   * 8 * 0.1
     0.74 = 90% power
+    Initial values for each pot were 0.67 so if this formula is right then they were already lower than max
+    I reduced them each down to 0.60 reducing by 10% to see if that would help. 
+    I am only trying to reduce noise, there was no heat problem. 
+    ... that did not help too much.
