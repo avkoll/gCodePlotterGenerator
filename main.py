@@ -1,37 +1,49 @@
-def generate_2d_plotter_gcode(points):
-    gcode = []
+from svgConverter import generate_curves  # Converts a svg file to gcode
+
+
+def starting_gcode():
+    gcodelist = []
 
     # Initialize the plotter
-    gcode.append("G21 ; Set units to millimeters")
-    gcode.append("G90 ; Use absolute positioning")
-    gcode.append("G28 X0 Y0 ; Home X and Y axes")  # Home only X and Y axes
-    gcode.append("G4 P2000 ; Wait for 2 seconds to ensure homing is completed")
-    gcode.append("G92 E0 ; Reset extruder position")
+    gcodelist.append("G21 ; Set units to millimeters\n")
+    gcodelist.append("G90 ; Use absolute positioning\n")
+    gcodelist.append("G28 X0 Y0 ; Home X and Y axes\n")  # Home only X and Y axes
+    gcodelist.append("G4 P2000 ; Wait for 2 seconds to ensure homing is completed\n")
+    gcodelist.append("G92 E0 ; Reset extruder position\n")
 
     # Move to the starting point
-    start_point = points[0]
-    gcode.append(f"G1 X{start_point[0]:.2f} Y{start_point[1]:.2f} F1500")
+    gcodelist.append("G1 X0 Y0 F1500\n")
+    #gcodelist.append("G91\n")
 
-    # Plot the points
-    for point in points[1:]:
-        x, y = point
-        gcode.append(f"G1 X{x:.2f} Y{y:.2f} F1500")
+    return "".join(gcodelist)
 
-    # Finish the plot
-    gcode.append("G28 X0 Y0 ; Home X and Y axes")  # Home only X and Y axes
-    gcode.append("G4 P2000 ; Wait for 2 seconds to ensure homing is completed")
-    gcode.append("M84 ; Disable motors")
 
-    return "\n".join(gcode)
+def create_shapes():
+    generate_curves("./svgs/star-svgrepo-com.svg")
+
+    # read from drawing.gcode 'buffer'
+    with open('drawing.gcode', 'r') as f:
+        lines = f.readlines()
+
+    # Skip certain lines and flatten the list
+    lines_to_append = (
+                       lines[5:] +
+                        [
+                        # Finish the plot
+                        "G28 X0 Y0 ; Home X and Y axes\n",
+                        "G4 P2000 ; Wait for 2 seconds to ensure homing is completed\n",
+                        "M84 ; Disable motors\n"])
+
+    return "".join(lines_to_append)
 
 
 def main():
-    # Define the points to plot a square
-    points = [(10, 10), (10, 50), (50, 50), (50, 10), (10, 10)]
+    gcode = [starting_gcode()]
 
-    gcode = generate_2d_plotter_gcode(points)
+    gcode.append(create_shapes())
+
     with open('plotter_output.gcode', 'w') as f:
-        f.write(gcode)
+        f.writelines(gcode)
 
 
 if __name__ == "__main__":
