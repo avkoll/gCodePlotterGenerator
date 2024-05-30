@@ -32,22 +32,19 @@ called at anytime during the program.
     - 
 
 TODOS:
+    
+    - motors loud as hell
     - list dependencies
         - track correct files from vpype lib
     - fix curves from vpype
         - starting
         - optimize travel between curves
-
-## vpype Shid:
-Alt profile for monoprice maker select V2:
-
-[gwrite.gcode_maker_select]
-document_start = "G20\nG17\nG90\nG28 X0 Y0\n"
-segment_first = "G00 X{x:.4f} Y{y:.4f}\n"
-segment = "G01 X{x:.4f} Y{y:.4f}\n"
-document_end = "G28 X0 Y0\nM2\n"
-unit = "in"
-vertical_flip = true
-info= "This gcode profile is correctly inverted across the y-axis"
+    
+## Trying to make motors quiet
+    Board is a Melzi Hybrid A4988 V3.5
+        -has embedded a4988 motor drivers in it, I am going to try to adjust the current.
+        if that doesn't work then I am going to explore using an arduino to control the system 
+        with some more robust motor controllers. 
+        TMC2208 for smoother movements
 
 
