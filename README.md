@@ -37,8 +37,8 @@ TODOS:
         - adjust current (lowered 10%)
         - adjust feed rate
             - 300 too quick
-            - 100
-            - 50 
+            - 100 too quick
+            - 10 
     - list dependencies
         - track correct files from vpype lib
     - fix curves from vpype
