@@ -8,13 +8,14 @@
   - Noise reduction was minimal
   - Need to explore new motor drivers
 - **Next Steps**:
-  - Research TMC2208 motor drivers
+  - Research TMC2209 motor drivers
   - See how easy it will be to redesign the rail system
   - 
 - **Notes**:
   - I think I am going to need to redesign the entire thing... I can reduce the footprint of the 'bot' if I don't use the 
   printer base. 
-
+  - Micro center sells a board with TMC2209 for the creality Ender, I think this is the way to go. 
+  - Buying new board and redesigning whole plotter using aluminum square extrusions
 
 # Template:
 ## 2024-05-30
