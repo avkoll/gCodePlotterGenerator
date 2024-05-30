@@ -1,4 +1,50 @@
 
+
+# 2D Plotter Table Project
+
+## Overview
+- I want to make a table with a 2d plotter inside that will be used to roll a marble through sand like a japanese garden Sisyphus industries 
+made one that I am basing my design off of.
+
+## Current Status
+- Prototype created
+  - only the robit part has been made, tabletop and legs still need to be made
+    - Add pictures here
+- Code is basically completed just needs some optimization
+
+## Tasks
+- [ ] Build Table
+- [ ] Build Bot
+  - [x] ProtoType
+  - [ ] Write Gcode Generator
+  - [ ] make bot quiet
+    - [ ] Replace controller
+    - [ ] Remake rails?
+  - [ ]
+- [ ] Add Bot to table
+- [ ] Completed Task
+
+## Log
+### 2024-05-30
+- Started working on motor calibration
+- Encountered noise issues with motors
+
+### 2024-05-19
+- Implemented vpype library
+- Removed deprecated scripts (main.py, svgConverter.py)
+
+## Resources
+- [vpype-gcode](https://pypi.org/project/vpype-gcode/)
+
+## Future Plans
+- Implement custom functions in main.py
+- Improve motor noise reduction
+- Replace motor driver
+- Make bot with higher quality plywood
+- Optimize vpype script
+
+
+Notes Pre reformatting:
 ---
 
 # Printer: Monoprice Maker Select V2
