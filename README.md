@@ -34,6 +34,11 @@ called at anytime during the program.
 TODOS:
     
     - motors loud as hell
+        - adjust current (lowered 10%)
+        - adjust feed rate
+            - 300 too quick
+            - 100
+            - 50 
     - list dependencies
         - track correct files from vpype lib
     - fix curves from vpype
