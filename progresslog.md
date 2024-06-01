@@ -1,5 +1,15 @@
 # Daily Progress Log
-
+## 2024-06-01
+- **Tasks Completed**:
+  - Done
+- **Challenges**:
+  - Silent printer board was a problem, could not get it to start up without all the printer components.
+  - 
+- **Next Steps**:
+  - develop arduino to control motors with cnc shield and tmc2208 motor drivers. 
+- **Notes**:
+  - Bars, sand and wheels came in today I will start designing the mk2 of the plotter.
+  - 
 ## 2024-05-30
 - **Tasks Completed**:
   - Adjusted motor current (reduced by 10%)
