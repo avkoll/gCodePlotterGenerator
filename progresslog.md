@@ -3,13 +3,15 @@
 - **Tasks Completed**:
   - Prototype made, need to tweak some tolerances and whatnot but the general layout works
 - **Challenges**:
-  - Done
+  - NA
 - **Next Steps**:
   - tweak tolerances
   - design magnet holder
   - redesign control board
+  - attach belts and test
 - **Notes**:
   - Redesigning robot to replace the 3d printer
+  - I did various changes to each part but I have everything except for the belts now I think
 
 ## 2024-06-01
 - **Tasks Completed**:
