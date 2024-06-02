@@ -1,4 +1,16 @@
 # Daily Progress Log
+## 2024-06-02
+- **Tasks Completed**:
+  - Prototype made, need to tweak some tolerances and whatnot but the general layout works
+- **Challenges**:
+  - Done
+- **Next Steps**:
+  - tweak tolerances
+  - design magnet holder
+  - redesign control board
+- **Notes**:
+  - Redesigning robot to replace the 3d printer
+
 ## 2024-06-01
 - **Tasks Completed**:
   - Done
