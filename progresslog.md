@@ -2,14 +2,19 @@
 ## 2024-06-04
 - **Tasks Completed**:
   - Prototype complete
+  - Lowered overall height by 30mm
+  - the motors are set up in the right direction
+  - Strengthened y-axis pulley mount
+  - mounting screws are now in channels so it can be moved on base
 - **Challenges**:
-  - 
+  - Blew power supply, tested with a car battery charger...
 - **Next Steps**:
   - program micro controller 
   - start on actual table part
 - **Notes**:
   - Completed working prototype yesterday, I am waiting on cnc shield and motor drivers to come in the mail.
   - Going to lower height by 30mm 
+  - The robot will be mounted upside down under a board, no need for a large box under the table anymore.
 ## 2024-06-02
 - **Tasks Completed**:
   - Prototype made, need to tweak some tolerances and whatnot but the general layout works
