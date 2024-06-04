@@ -21,18 +21,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "avkoll"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;avkoll&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/avkoll/gCodePlotterGenerator.git",
-    "accountId": "212c6c12-0352-4571-a221-cc16696efaff"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/avkoll/gCodePlotterGenerator.git&quot;,
+    &quot;accountId&quot;: &quot;212c6c12-0352-4571-a221-cc16696efaff&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -101,7 +101,8 @@
       <option name="presentableId" value="Default" />
       <updated>1716167675670</updated>
       <workItem from="1716167681912" duration="3497000" />
-      <workItem from="1717265310183" duration="3247000" />
+      <workItem from="1717265310183" duration="3260000" />
+      <workItem from="1717517691720" duration="94000" />
     </task>
     <servers />
   </component>

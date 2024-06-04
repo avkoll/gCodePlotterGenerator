@@ -1,4 +1,15 @@
 # Daily Progress Log
+## 2024-06-04
+- **Tasks Completed**:
+  - Prototype complete
+- **Challenges**:
+  - 
+- **Next Steps**:
+  - program micro controller 
+  - start on actual table part
+- **Notes**:
+  - Completed working prototype yesterday, I am waiting on cnc shield and motor drivers to come in the mail.
+  - Going to lower height by 30mm 
 ## 2024-06-02
 - **Tasks Completed**:
   - Prototype made, need to tweak some tolerances and whatnot but the general layout works
