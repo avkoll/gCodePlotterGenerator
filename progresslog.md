@@ -1,4 +1,27 @@
 # Daily Progress Log
+# Template:
+## 2024-00-00
+- **Tasks Completed**:
+  - Done
+- **Challenges**:
+  - Done
+- **Next Steps**:
+  - Done
+- **Notes**:
+  - 
+- # Template:
+## 2024-06-05
+- **Tasks Completed**:
+  - None
+- **Challenges**:
+  - None
+- **Next Steps**:
+  - program micro controller 
+  - start on actual table part
+- **Notes**:
+  - Raspberry pi will control arduino which has a cnc shield and the two tmc2208 motor drivers on it.
+  - I don't know how we will tell the table to make each drawing yet 
+  
 ## 2024-06-04
 - **Tasks Completed**:
   - Prototype complete
@@ -59,13 +82,3 @@
       - I need to flash firmware onto it
   - Buying new board and redesigning whole plotter using aluminum square extrusions
 
-# Template:
-## 2024-05-30
-- **Tasks Completed**:
-  - Done
-- **Challenges**:
-  - Done
-- **Next Steps**:
-  - Done
-- **Notes**:
-  - 
