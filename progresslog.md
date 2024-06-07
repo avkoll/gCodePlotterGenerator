@@ -13,7 +13,7 @@
 - **Tasks Completed**:
   - Connected to raspberry pi via vnc 
 - **Challenges**:
-  - Done
+  - need to configure and recompile grbl to only home the x and y axis...
 - **Next Steps**:
   - 
 - **Notes**:
