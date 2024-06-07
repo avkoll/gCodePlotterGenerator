@@ -9,7 +9,17 @@
   - Done
 - **Notes**:
   - 
-- # Template:
+## 2024-06-07
+- **Tasks Completed**:
+  - Connected to raspberry pi via vnc 
+- **Challenges**:
+  - Done
+- **Next Steps**:
+  - 
+- **Notes**:
+  - I will setup a webserver on the pi that you can connect to when on the same wifi to select which file you want to be drawn
+  - I need to get a beefier power supply for the pi, it is on 2.4 amps and it recommends 5 or something
+
 ## 2024-06-05
 - **Tasks Completed**:
   - None
