@@ -5,14 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c25ea73e-6905-40c8-880f-ab2416b87d86" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Flask Server/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/progresslog.md" beforeDir="false" afterPath="$PROJECT_DIR$/progresslog.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -105,7 +111,7 @@
       <workItem from="1717265310183" duration="3260000" />
       <workItem from="1717517691720" duration="6303000" />
       <workItem from="1717771156805" duration="6934000" />
-      <workItem from="1717881532085" duration="933000" />
+      <workItem from="1717881532085" duration="1016000" />
     </task>
     <servers />
   </component>
