@@ -9,6 +9,16 @@
   - Done
 - **Notes**:
   - 
+## 2024-06-08
+- **Tasks Completed**:
+  - Done
+- **Challenges**:
+  - Done
+- **Next Steps**:
+  - Done
+- **Notes**:
+  - Sewtting up flask server to execute python commands on local network to control machine
+
 ## 2024-06-07
 - **Tasks Completed**:
   - Connected to raspberry pi via vnc 
