@@ -23,6 +23,8 @@
   - I will setup a webserver on the pi that you can connect to when on the same wifi to select which file you want to be drawn
   - I need to get a beefier power supply for the pi, it is on 2.4 amps and it recommends 5 or something
   - Got old power supply working 
+  - EDIT THE CONFIG FILE THAT WILL BE USED TO COMPILE!!!!
+  - 
 
 ## 2024-06-05
 - **Tasks Completed**:
