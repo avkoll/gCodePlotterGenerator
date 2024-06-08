@@ -52,6 +52,7 @@ made one that I am basing my design off of.
   - python
   - grbl
   - UGS
+  - pyserial
 
 flask server is accessible from here:
 http://raspberrypi.local:5000
