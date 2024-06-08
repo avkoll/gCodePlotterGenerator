@@ -12,13 +12,20 @@
 ## 2024-06-08
 - **Tasks Completed**:
   - Server setup
+  - I am able to execute gcode files by accessing the flask server
 - **Challenges**:
-  - 
+  - Need to get steps and units corrected
+  - CNC only executes homing and the first G0 command then sits there. 
 - **Next Steps**:
   - Start on table
+  - Have it start server and home when the table is turned on so it is ready to execute files on demand
 - **Notes**:
   - Setting up flask server to execute python commands on local network to control machine
   - flask server setup in a venv in ~/flask_app
+  - remember to copy over the grbl settings into this repo
+  - dependencies are increasing.. 
+
+
 
 ## 2024-06-07
 - **Tasks Completed**:
