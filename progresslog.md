@@ -11,13 +11,14 @@
   - 
 ## 2024-06-08
 - **Tasks Completed**:
-  - Done
+  - Server setup
 - **Challenges**:
-  - Done
+  - 
 - **Next Steps**:
-  - Done
+  - Start on table
 - **Notes**:
-  - Sewtting up flask server to execute python commands on local network to control machine
+  - Setting up flask server to execute python commands on local network to control machine
+  - flask server setup in a venv in ~/flask_app
 
 ## 2024-06-07
 - **Tasks Completed**:

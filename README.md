@@ -44,6 +44,18 @@ made one that I am basing my design off of.
 - Optimize vpype script
 
 
+
+## Dependencies
+- Raspberry pi:
+  - flask
+  - venv
+  - python
+  - grbl
+  - UGS
+
+flask server is accessible from here:
+http://raspberrypi.local:5000
+
 Notes Pre reformatting:
 ---
 
