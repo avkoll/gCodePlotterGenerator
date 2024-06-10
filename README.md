@@ -53,6 +53,7 @@ made one that I am basing my design off of.
   - grbl
   - UGS
   - pyserial
+  - tmux 
 
 flask server is accessible from here:
 http://raspberrypi.local:5000

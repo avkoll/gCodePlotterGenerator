@@ -8,7 +8,27 @@
 - **Next Steps**:
   - Done
 - **Notes**:
-  - 
+  -
+
+## 2024-06-10
+- **Tasks Completed**:
+  - Done
+- **Challenges**:
+  - test.gcode just homes and then moves quickly and stops
+- **Next Steps**:
+  - Done
+- **Notes**:
+  - I don't think this will be done by the 18th
+  - trying to figure out right grbl settings
+  - Steps/mm = (Steps per Revolution)*(Microsteps) / (mm per Revolution)
+1) Steps per Revolution = 200 Typical - This is the number of steps required
+for your stepper motor to make 1 complete revolution.
+   - I am going to go with 200 since that is typical
+2) Microsteps - 1,2,4,8,16 - Is a setting on your stepper motor driver. A higher
+value means lower torque but higher accuracy.
+   - I think I am on 32 microsteps
+3) mm per Revolution - Determined by your machine setup. (lead screw pitch)
+
 ## 2024-06-08
 - **Tasks Completed**:
   - Server setup
