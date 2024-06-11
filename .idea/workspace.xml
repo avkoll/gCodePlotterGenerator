@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c25ea73e-6905-40c8-880f-ab2416b87d86" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flask Server/static/gcode_files/snoflake.gcode" beforeDir="false" afterPath="$PROJECT_DIR$/Flask Server/static/gcode_files/snoflake.gcode" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/vpype_gcode/bundled_configs.toml" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/vpype_gcode/bundled_configs.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grblConfig/GRBLSettings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/grblConfig/GRBLSettings.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +112,7 @@
       <workItem from="1717265310183" duration="3260000" />
       <workItem from="1717517691720" duration="6303000" />
       <workItem from="1717771156805" duration="6934000" />
-      <workItem from="1717881532085" duration="21020000" />
+      <workItem from="1717881532085" duration="22328000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
