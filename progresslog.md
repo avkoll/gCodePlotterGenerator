@@ -10,6 +10,17 @@
 - **Notes**:
   -
 
+## 2024-06-11
+- **Tasks Completed**:
+  - Done
+- **Challenges**:
+  - x axis is moving half the distance of the y axis
+- **Next Steps**:
+  - Done
+- **Notes**:
+  - the updated grbl settings in this repo work at a ratio of 2.54 : 1. moving to position 100 moves it ~254mm instead of 100mm
+
+
 ## 2024-06-10
 - **Tasks Completed**:
   - Done
