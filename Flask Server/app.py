@@ -20,10 +20,18 @@ def send_gcode():
     file_path = os.path.join(GCODE_DIR, selected_file)
 
     try:
-        with serial.Serial(SERIAL_PORT, BAUD_RATE) as ser:
+        with serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1) as ser:
             with open(file_path, 'r') as f:
                 for line in f:
-                    ser.write(line.encode() + b'\n')
+                    command = line.strip()
+                    if command:
+                        print(f"Sending: {command}")
+                        ser.write((command + '\n').encode())
+                        response = ser.readline().decode().strip()
+                        print(f"Response: {response}")
+                        if "error" in response.lower() or "alarm" in response.lower():
+                            flash(f"Error in G-code execution: {response}", 'error')
+                            break
         flash('G-code sent successfully!', 'success')
     except Exception as e:
         flash(f'Failed to send G-code: {str(e)}', 'error')
