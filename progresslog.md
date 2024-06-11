@@ -25,7 +25,7 @@
   - Fixed the problem above ^ I had the grbl settings wrong...
   - the size of the file is not the problem.
   it is still giving error 9 when I only include the first ten lines of the snowflake file so it is something with the commands
-  - 
+  - I am going to try multiplying each value by 0.9 so it fits within the margins
 
 
 ## 2024-06-10
