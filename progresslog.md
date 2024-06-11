@@ -20,12 +20,14 @@
   - make table lol
   - change gcode generator
   - test gcode from the generator
+  - Figure out how to use the UGS API and integrate with the flask server, sending the files directly wont work reliably
 - **Notes**:
   - the updated grbl settings in this repo work at a ratio of 2.54 : 1. moving to position 100 moves it ~254mm instead of 100mm
   - Fixed the problem above ^ I had the grbl settings wrong...
   - the size of the file is not the problem.
   it is still giving error 9 when I only include the first ten lines of the snowflake file so it is something with the commands
   - I am going to try multiplying each value by 0.9 so it fits within the margins
+  - I 
 
 
 ## 2024-06-10
