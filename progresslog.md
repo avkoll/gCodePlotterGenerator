@@ -23,7 +23,8 @@
   - Steps/mm = (Steps per Revolution)*(Microsteps) / (mm per Revolution)
 1) Steps per Revolution = 200 Typical - This is the number of steps required
 for your stepper motor to make 1 complete revolution.
-   - I am going to go with 200 since that is typical
+   - I am going to go with 200 since that is typical 
+   - 1.8 deg/step
 2) Microsteps - 1,2,4,8,16 - Is a setting on your stepper motor driver. A higher
 value means lower torque but higher accuracy.
    - I think I am on 32 microsteps
