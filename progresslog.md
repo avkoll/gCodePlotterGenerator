@@ -15,6 +15,7 @@
   - robit now moves with the correct units and whatnot. 
 - **Challenges**:
   - need to change how the gcode for shapes is generated.
+  - arduino only has ~400 bytes of memory maybe that is causing the problems
 - **Next Steps**:
   - make table lol
   - change gcode generator
@@ -22,6 +23,8 @@
 - **Notes**:
   - the updated grbl settings in this repo work at a ratio of 2.54 : 1. moving to position 100 moves it ~254mm instead of 100mm
   - Fixed the problem above ^ I had the grbl settings wrong...
+  - the size of the file is not the problem.
+  it is still giving error 9 when I only include the first ten lines of the snowflake file so it is something with the commands
   - 
 
 
