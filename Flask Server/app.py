@@ -1,4 +1,4 @@
-  GNU nano 7.2                                             app.py                                                       from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash
 import os
 import serial
 
