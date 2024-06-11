@@ -12,13 +12,17 @@
 
 ## 2024-06-11
 - **Tasks Completed**:
-  - Done
+  - robit now moves with the correct units and whatnot. 
 - **Challenges**:
-  - x axis is moving half the distance of the y axis
+  - need to change how the gcode for shapes is generated.
 - **Next Steps**:
-  - Done
+  - make table lol
+  - change gcode generator
+  - test gcode from the generator
 - **Notes**:
   - the updated grbl settings in this repo work at a ratio of 2.54 : 1. moving to position 100 moves it ~254mm instead of 100mm
+  - Fixed the problem above ^ I had the grbl settings wrong...
+  - 
 
 
 ## 2024-06-10
