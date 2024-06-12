@@ -12,23 +12,29 @@
 
 ## 2024-06-11
 - **Tasks Completed**:
-  - robit now moves with the correct units and whatnot. 
+  - robit now moves with the correct units and whatnot.
+  - web interface with UGS is a lifesaver
+  - the web interface and UGS run on startup
 - **Challenges**:
   - need to change how the gcode for shapes is generated.
-  - arduino only has ~400 bytes of memory maybe that is causing the problems
+  - ~~arduino only has around 400 bytes of memory, maybe that is causing the problems~~
 - **Next Steps**:
   - make table lol
   - change gcode generator
   - test gcode from the generator
-  - Figure out how to use the UGS API and integrate with the flask server, sending the files directly wont work reliably
+  - ~~Figure out how to use the UGS API and integrate with the flask server, sending the files directly wont work reliably~~
+  - tune the offsets
+  - clean repo
+  - create a backup of the raspberry pi sd card so I can just plug in if it fails
 - **Notes**:
   - the updated grbl settings in this repo work at a ratio of 2.54 : 1. moving to position 100 moves it ~254mm instead of 100mm
   - Fixed the problem above ^ I had the grbl settings wrong...
   - the size of the file is not the problem.
   it is still giving error 9 when I only include the first ten lines of the snowflake file so it is something with the commands
   - I am going to try multiplying each value by 0.9 so it fits within the margins
-  - I 
-
+  - Universal Gcode Sender has a web pendant built into the app so I no longer need the flask server
+  - I need to redo alot of dependencies and clean up the repo
+  - 
 
 ## 2024-06-10
 - **Tasks Completed**:
