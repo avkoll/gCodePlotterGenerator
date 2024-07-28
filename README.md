@@ -1,130 +1,124 @@
-
-
-# 2D Plotter Table Project
-
-## Overview
-- I want to make a table with a 2d plotter inside that will be used to roll a marble through sand like a japanese garden Sisyphus industries 
-made one that I am basing my design off of.
-
-## Current Status
-- Prototype created
-  - only the robit part has been made, tabletop and legs still need to be made
-    - Add pictures here
-- Code is basically completed just needs some optimization
-
-## Tasks
-- [ ] Build Table
-- [ ] Build Bot
-  - [x] ProtoType
-  - [ ] Write Gcode Generator
-  - [ ] make bot quiet
-    - [ ] Replace controller
-    - [ ] Remake rails?
-  - [ ]
-- [ ] Add Bot to table
-- [ ] Completed Task
-
-## Log
-### 2024-05-30
-- Started working on motor calibration
-- Encountered noise issues with motors
-
-### 2024-05-19
-- Implemented vpype library
-- Removed deprecated scripts (main.py, svgConverter.py)
-
-## Resources
-- [vpype-gcode](https://pypi.org/project/vpype-gcode/)
-
-## Future Plans
-- Implement custom functions in main.py
-- Improve motor noise reduction
-- Replace motor driver
-- Make bot with higher quality plywood
-- Optimize vpype script
-
-
-
-## Dependencies
-- Raspberry pi:
-  - flask
-  - venv
-  - python
-  - grbl
-  - UGS
-  - pyserial
-  - tmux 
-
-flask server is accessible from here:
-http://raspberrypi.local:5000
-
-Notes Pre reformatting:
----
-
-# Printer: Monoprice Maker Select V2
-
-## Overview
-- **X and Y Axis Plotter**: 250mm each
-
-## Firmware
-- **Type**: Marlin G-code
-- **SD Card**: Must be FAT32 formatted
-
-## Current Workflow
-- **drawing.gcode**: Used as a buffer due to library limitations (returning an array)
-- **Library to Explore**: [vpype-gcode](https://pypi.org/project/vpype-gcode/)
-
-### File Usage
-- **main.py** and **svgConverter.py**: No longer in use
-- **vpype.py**: Utilizes the vpype library for current functionalities
-  - Future Use of **main.py**: Writing custom functions callable at any time during the program
-
-## General Flow of main.py
-1. Zero
-2. Flatten sand
-3. Pick up marble
-   - Choose marble size
-4. Start drawing at the closest point to the curve from the marble parking spot
-5. Draw
-6. Finish drawing
-   - Options:
-     - Flatten sand
-       - Return marble
-       - Do whatever flattens sand
-     - Continue another drawing over it
-     - Park marble
-
-## TODOS
-- **Motors Loud as Hell**
-  - ~~Adjust current (lowered 10%)~~
-  - ~~Adjust feed rate (none worked)~~
-    - ~~300 too quick~~
-    - ~~100 too quick~~
-    - ~~10 too slow~~
-  - Replace control board with something better
-- **List Dependencies**
-  - Track correct files from vpype library
-- **Fix Curves from vpype**
-  - Starting
-  - Optimize travel between curves
-
-## Trying to Make Motors Quiet
-- **Board**: Melzi Hybrid A4988 V3.5 (embedded A4988 motor drivers)
-  - Adjusting current: if unsuccessful, explore using an Arduino with robust motor controllers
-  - Potential controllers: TMC2208 for smoother movements, R100 Resistors
-- **Motors**: C17HD40102-01N BiPolar
-  - 1.8 degrees per step
-  - 1.02A
-  - 0.62NM
-
-### Tuning Drivers for Noise Reduction (DID NOT WORK)
-- Following this guide: [Adjusting stepper motor current on Melzi Board](https://3dprinterwiki.info/setting-the-stepper-current-on-the-melzi-board/)
-  - **Target**: 90% max current
-  - **Formula**: VREF = Current(A) * 8 * SenseResistor(RS)
-    - 0.82 = 1.02 * 8 * 0.1
-    - 0.74 = 90% power
-  - Initial values for each potentiometer: 0.67 (lower than max)
-  - Reduced to 0.60 (by 10%) to see if it helps
-  - **Result**: Noise reduction was minimal; further steps needed
+Sure! Here's a README template for your project:
 
 ---
+
+# Plotter Table Project
+
+## Overview
+
+This project involves creating a table that integrates a Raspberry Pi and an Arduino to control a plotter. The table is designed to move along the X and Y axes to create precise 2D drawings based on G-code instructions.
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Hardware Requirements](#hardware-requirements)
+4. [Software Requirements](#software-requirements)
+5. [Setup Instructions](#setup-instructions)
+6. [Usage](#usage)
+7. [Troubleshooting](#troubleshooting)
+8. [Contributing](#contributing)
+9. [License](#license)
+10. [Acknowledgments](#acknowledgments)
+
+## Introduction
+
+This project I aimed to repurpose a Monoprice Maker Select V2 3D printer into a 2D plotter and attach it to a table to mimic 
+those designed by [Sisyphus Industries](https://sisyphus-industries.com/). I ended up designing a 2-D plotter 
+and just used some parts from the printer. The plotter is 
+controlled using a Raspberry Pi and an Arduino running [GRBL](https://github.com/grbl/grbl) firmware. The Raspberry Pi sends G-code files to the Arduino,
+(using [UGS](https://winder.github.io/ugs_website/)) 
+which then drives the stepper motors to create precise movements along the X and Y axes.
+
+## Features
+
+- Precise 2D plotting using stepper motors.
+- Controlled via G-code commands.
+- Integration with Raspberry Pi for processing and sending G-code.
+- Uses an Arduino with GRBL firmware for motor control.
+- Receives commands through the UGS web pendant accessible through wi-fi.
+
+
+## Hardware I Used
+
+- Raspberry Pi 3 B+
+- Arduino Uno R3
+- Arduino CNC shield
+- Stepper motors and TMC2208 motor drivers 
+- Power supply (from the old 3-D printer)
+- LED Strip
+- Table from craigslist
+- 16" round piece of glass
+- Wiring and connectors
+
+
+## Software Requirements
+
+- Raspbian OS (or any Linux-based OS for Raspberry Pi)
+- Python (for sending G-code from Raspberry Pi)
+- GRBL firmware (installed on Arduino)
+- Serial communication library (e.g., `pySerial` for Python)
+- UGS installed on Raspberry Pi.
+- Vpype to generate GCode from SVG images
+
+## Setup Instructions
+
+1. **Hardware Assembly:**
+    - Assemble the plotter frame using the salvaged parts from the Monoprice Maker Select V2.
+    - Connect the stepper motors to the motor drivers and the drivers to the Arduino.
+    - Connect the Arduino to the Raspberry Pi using a USB cable.
+    - Ensure all power connections are secure and properly insulated.
+
+2. **Software Setup:**
+    - Install Raspbian OS on the Raspberry Pi.
+    - Install Python and `pySerial` on the Raspberry Pi:
+      ```sh
+      sudo apt-get update
+      sudo apt-get install python3 python3-pip
+      pip3 install pyserial
+      ```
+    - Flash the GRBL firmware onto the Arduino:
+      - Follow the instructions [here](https://github.com/gnea/grbl) to install GRBL on your Arduino.
+    - Clone the project repository to the Raspberry Pi:
+      ```sh
+      git clone https://github.com/yourusername/plotter-table-project.git
+      cd plotter-table-project
+      ```
+
+## Usage
+
+1. **Starting the Plotter:**
+    - Power on the Raspberry Pi and Arduino.
+    - Navigate to the project directory on the Raspberry Pi and run the Python script to send G-code:
+      ```sh
+      python3 send_gcode.py
+      ```
+    - The plotter will start drawing based on the provided G-code file.
+
+2. **G-code Generation:**
+    - Use any CAD software to design your drawing and export it as a G-code file.
+    - Place the G-code file in the project directory on the Raspberry Pi.
+
+## Troubleshooting
+
+- **Motor Not Moving:**
+  - Check connections between the Arduino, stepper drivers, and motors.
+  - Ensure the GRBL firmware is correctly installed on the Arduino.
+  
+- **Incorrect Drawing:**
+  - Verify the G-code file for errors.
+  - Check the calibration of the plotter's axes.
+
+## Contributing
+
+Contributions are welcome! Please fork this repository and submit a pull request with your changes. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Thanks to the creators of GRBL for their excellent firmware.
+- Inspiration for this project came from [Sisyphus Industries](https://sisyphus-industries.com/)
+
