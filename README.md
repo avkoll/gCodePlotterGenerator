@@ -54,12 +54,12 @@ which then drives the stepper motors to create precise movements along the X and
 
 ## Software Requirements
 
-- Raspbian OS (or any Linux-based OS for Raspberry Pi)
-- Python (for sending G-code from Raspberry Pi)
+- Raspbian OS 
+- Python3
 - GRBL firmware (installed on Arduino)
-- Serial communication library (e.g., `pySerial` for Python)
 - UGS installed on Raspberry Pi.
 - Vpype to generate GCode from SVG images
+- 
 
 ## Setup Instructions
 
